@@ -1,4 +1,4 @@
-# Supervisord Docker File
+# jdash/supervisor Docker File
 # Built on ubuntu:latest
 # Version 1.0
 

@@ -1,5 +1,5 @@
-# HHVM Docker File
-# Built on Ubuntu:Latest
+# jdash/hhvm Docker File
+# Built on jdash/supervisor:latest (built on ubuntu:latest)
 # Version 1.0
 
 # Define the initial base image
