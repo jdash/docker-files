@@ -24,3 +24,9 @@ VOLUME  ["/etc/mysql", "/var/lib/mysql"]
 
 # Expose the MariaDB port
 EXPOSE 3306
+
+# Add the supervisord configuration file for MariaDB
+ADD mariadb.sv.conf /etc/supervisor/conf.d/
+
+# Set supervisord to launch upon the start of the container
+CMD supervisord -c /etc/supervisor.conf
