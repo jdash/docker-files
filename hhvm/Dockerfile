@@ -23,4 +23,5 @@ EXPOSE 9000
 ADD hhvm.sv.conf /etc/supervisor/conf.d/
 
 # Set supervisord to launch upon the start of the container
-CMD supervisord -c /etc/supervisor.conf
+ENTRYPOINT ["supervisord"]
+CMD ["--configuration=/etc/supervisor.conf"]
