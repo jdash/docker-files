@@ -22,11 +22,11 @@ RUN \
 
 # Install PageSpeed for Nginx
 RUN \
-  wget https://github.com/pagespeed/ngx_pagespeed/archive/v1.8.31.2-beta.tar.gz && \
-  tar -xf v1.8.31.2-beta.tar.gz && \
-  cd ngx_pagespeed-1.8.31.2-beta/ && \
-  wget https://dl.google.com/dl/page-speed/psol/1.8.31.2.tar.gz && \
-  tar -xzf 1.8.31.2.tar.gz
+  wget https://github.com/pagespeed/ngx_pagespeed/archive/v1.8.31.3-beta.tar.gz && \
+  tar -xf v1.8.31.3-beta.tar.gz && \
+  cd ngx_pagespeed-1.8.31.3-beta/ && \
+  wget https://dl.google.com/dl/page-speed/psol/1.8.31.3.tar.gz && \
+  tar -xzf 1.8.31.3.tar.gz
 
 # Install Nginx
 RUN \
