@@ -33,8 +33,9 @@ RUN \
   wget http://nginx.org/download/nginx-1.7.0.tar.gz && \
   tar -xf nginx-1.7.0.tar.gz && \
   cd nginx-1.7.0 && \
-  ./configure --add-module=../modsecurity-2.8.0/nginx/modsecurity --add-module=../ngx_pagespeed-1.8.31.2-beta --user=www-data --group=www-data --with-http_ssl_module --with-http_realip_module \
-	--with-http_gzip_static_module --with-http_spdy_module && \
+  ./configure --add-module=../modsecurity-2.8.0/nginx/modsecurity --add-module=../ngx_pagespeed-1.8.31.2-beta --user=www-data --group=www-data --sbin-path=/usr/sbin/nginx \
+	--conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_ssl_module --with-http_realip_module \
+	--with-http_gzip_static_module --with-http_spdy_module --pid-path=/var/run/nginx.pid && \
   make 1>/dev/null && \ 
   make install 1>/dev/null && \ 
   make clean 1>/dev/null
