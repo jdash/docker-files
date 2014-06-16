@@ -30,10 +30,10 @@ RUN \
 
 # Install Nginx
 RUN \
-  wget http://nginx.org/download/nginx-1.7.0.tar.gz && \
-  tar -xf nginx-1.7.0.tar.gz && \
-  cd nginx-1.7.0 && \
-  ./configure --add-module=../modsecurity-2.8.0/nginx/modsecurity --add-module=../ngx_pagespeed-1.8.31.2-beta --user=www-data --group=www-data --sbin-path=/usr/sbin/nginx \
+  wget http://nginx.org/download/nginx-1.7.1.tar.gz && \
+  tar -xf nginx-1.7.1.tar.gz && \
+  cd nginx-1.7.1 && \
+  ./configure --add-module=../modsecurity-2.8.0/nginx/modsecurity --add-module=../ngx_pagespeed-1.8.31.3-beta --user=www-data --group=www-data --sbin-path=/usr/sbin/nginx \
 	--conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_ssl_module --with-http_realip_module \
 	--with-http_gzip_static_module --with-http_spdy_module --pid-path=/var/run/nginx.pid && \
   make 1>/dev/null && \ 
@@ -47,7 +47,7 @@ RUN \
   cd .. && \
   apt-get remove -qq build-essential && \ 
   apt-get clean && \
-  rm -f -r /var/lib/apt/lists/archive* modsecurity-2.8.0* nginx-1.7.0* ngx_pagespeed* v1.8.31.2-beta.tar.gz
+  rm -f -r /var/lib/apt/lists/archive* modsecurity-2.8.0* nginx-1.7* ngx_pagespeed* v1.8.31.*
 
 # Expose HTTP & HTTPS ports
 EXPOSE 80
