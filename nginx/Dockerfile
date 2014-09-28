@@ -6,7 +6,7 @@
 FROM jdash/supervisor:latest
 
 # Maintainer Information
-MAINTAINER James M. Dasher, @jdash, james@jdasher.com
+MAINTAINER @jdash
 
 # Install necessary software
 RUN apt-get install -qq wget tar build-essential apache2-threaded-dev libxml2-dev libcurl4-openssl-dev zlib1g-dev libpcre3 libpcre3-dev 1>/dev/null
