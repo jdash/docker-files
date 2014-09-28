@@ -6,7 +6,7 @@
 FROM ubuntu:latest
 
 # Maintainer Informaion
-MAINTAINER James M. Dasher, @jdash, james@jdasher.com
+MAINTAINER @jdash
 
 # Update the base image
 RUN sed -i.bak 's/main$/main universe/' /etc/apt/sources.list
