@@ -6,7 +6,7 @@
 FROM jdash/supervisor:latest
 
 # Maintainer Information
-MAINTAINER James M. Dasher, @jdash, james@jdasher.com
+MAINTAINER @jdash
 
 # Add the MariaDB Repo
 RUN apt-get install -qq software-properties-common
