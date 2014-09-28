@@ -6,7 +6,7 @@
 FROM jdash/supervisor:latest
 
 # Maintainer Information
-MAINTAINER James M. Dasher, @jdash, james@jdasher.com
+MAINTAINER @jdash
 
 # Install wget to add the repo info
 RUN apt-get install -qq wget
